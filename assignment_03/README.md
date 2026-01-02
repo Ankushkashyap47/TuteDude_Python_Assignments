@@ -1,34 +1,43 @@
-# Assignment 02 
-**Task 1: Check if a Number is Even or Odd **
+# Assignment 03 
+**Task 1: Calculate Factorial Using a Function **
 
 Problem Statement:  Write a Python program that:
-1. 	Takes an integer input from the user.
-2. 	Checks whether the number is even or odd using an if-else statement.
-3. 	Displays the result accordingly.
+1.   Defines a function named factorial that takes a number as an argument and calculates its factorial using a 
+     loop or recursion.
+2.   Returns the calculated factorial.
+3.   Calls the function with a sample number and prints the output.
 
 Solution:
-Step 1: The input() function is used to take an integer input from the user.
-Step 2: Logic implemented:
-    a. A number is taken as input from the user.
-    b. The program checks whether the number is divisible by 2 or not.
-    c. If num % 2 == 0 is True, the number is even.
-    d. If num % 2 == 1 is True, the number is odd.
-Step 3: An if block is used to check whether the number is even (when num % 2 == 0 ) and prints "number is even" 
-        if the condition is True.
-Step 4: An else block is used to handle the odd number case and prints "number is odd" if the condition is False.
+Step 1: Defined a function named "factorial(num)" that calculates the factorial of a given number.
+
+Step 2: Inside the function, check if the input number num is less than 0. If num < 0, return None because 
+the factorial of a negative number is not defined.
+
+Step 3: Check if the input number is equal to 0. If num == 0, return 1, since the factorial of 0 is 1.
+
+Step 4:If the number is greater than 0, calculated the factorial recursively by multiplying the number 
+with the factorial of (num − 1) and return the result.
+
+Step 5: Taken an integer input from the user using the input() function and converted it to an integer using int().
+
+Step 6: Called the factorial() function with the user-provided number and store the returned value in the 
+variable factorial_value.
+
+Step 7: Checked if the returned value is None. If it is None, printed a message indicating that the factorial of 
+a negative number is not allowed.
+
+Step 8: If the returned value is not None, printed the factorial of the entered number.
 
 ------------------------------------------------------------------------------------------------------------------
 
-**Task 2: Sum of Integers from 1 to 50 Using a Loop **
+**Task 2: Using the Math Module for Calculations **
 
 Problem Statement: Write a Python program that:
-1.   Uses a for loop to iterate over numbers from 1 to 50.
-2.   Calculates the sum of all integers in this range.
-3.   Displays the final sum.
+1.   Asks the user for a number as input.
+2.   Uses the math module to calculate the:
+    o   Square root of the number
+    o   Natural logarithm (log base e) of the number
+    o   Sine of the number (in radians)
+3.   Displays the calculated results.
 
-Solution:
-Step 1: A variable named sum is declared and initialized with the value 0.
-Step 2: A for loop is used to iterate from 1 to 50. During each iteration, the current value of the loop variable i 
-    is added to sum. This process continues until the loop completes all 50 iterations, resulting in the total sum of
-    numbers from 1 to 50.
-Step 3: The calculated total sum is printed using the sum variable and print() function.
+
