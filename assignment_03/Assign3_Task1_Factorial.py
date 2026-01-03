@@ -1,17 +1,10 @@
 """
 Assignment 3
 Task 1: Calculate Factorial Using a Function
-1.   Defines a function named factorial that takes a number as an argument
-and calculates its factorial using a loop or recursion.
-2.   Returns the calculated factorial.
-3.   Calls the function with a sample number and prints the output.
-
-
-logic implemented:
-a. Takes a number input from the user.
-b.
-c. if num%2==0 is True, number is even.
-d. and if num%2==1 is False, number is odd.
+1. Factorial function created using recursion method to calculate the factorial.
+2. Function only return the factorial for non-negative integers.
+3. n! = n*(n-1)*(n-2)...1
+4. Returns the calculated factorial.
 """
 
 def factorial(num):
@@ -30,5 +23,4 @@ if factorial_value is None:
     print("Factorial of negative number is not allowed")
 else:
     print(f"Factorial of {number} is: {factorial_value}")
-
 

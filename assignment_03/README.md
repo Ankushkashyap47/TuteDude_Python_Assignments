@@ -40,4 +40,33 @@ Problem Statement: Write a Python program that:
     o   Sine of the number (in radians)
 3.   Displays the calculated results.
 
+Solution:
+Step 1: Imported the math module to access mathematical functions such as square root, logarithm, and sine.
+
+Step 2: Defined a function square_root(num) to calculate the square root of a number. If the number is negative,
+the function returns None because the square root of a negative number is not defined.
+If the number is non-negative, the function returns the square root using math.sqrt().
+
+Step 3: Defined a function natural_log(num) to calculate the natural logarithm of a number.If the number is less than 
+or equal to zero, the function returns None because the natural logarithm is defined only for positive numbers.
+If the number is positive, the function returns the natural logarithm using math.log().
+
+Step 4: Defined a function sine(num) to calculate the sine of a number.The input value is considered to be in radians.
+The sine value is calculated using math.sin().
+
+Step 5: integer input from the user using the input() function taken and converted it into an integer using int().
+
+Step 6: Call the square_root(), natural_log(), and sine() functions with the user-provided number and store their 
+returned values in separate variables.
+
+Step 7: Checked the returned value of the square root function. If the value is None, displayed a message indicating
+that the square root is not defined for negative numbers.
+Otherwise, display the calculated square root.
+
+Step 8: Checked the returned value of the natural logarithm function.If the value is None, displayed a message 
+indicating that the natural logarithm is defined only for positive numbers.
+Otherwise, display the calculated logarithm.
+
+Step 9: Displayed the sine value of the number, as sine is defined for all real numbers.
+
 
