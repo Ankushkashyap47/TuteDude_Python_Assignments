@@ -1,72 +1,63 @@
 # Assignment 03 
-**Task 1: Calculate Factorial Using a Function **
-
+**Task 1: Read a File and Handle Errors **
 Problem Statement:  Write a Python program that:
-1.   Defines a function named factorial that takes a number as an argument and calculates its factorial using a 
-     loop or recursion.
-2.   Returns the calculated factorial.
-3.   Calls the function with a sample number and prints the output.
-
+1.   Opens and reads a text file named sample.txt.
+2.   Prints its content line by line.
+3.   Handles errors gracefully if the file does not exist.
+ 
 Solution:
-Step 1: Defined a function named "factorial(num)" that calculates the factorial of a given number.
+Step 1: The program starts with a try block to handle possible file-related errors during execution.
 
-Step 2: Inside the function, check if the input number num is less than 0. If num < 0, return None because 
-the factorial of a negative number is not defined.
+Step 2: The open() function is used in read text mode ("rt") to open the file named sample.txt.
+The with statement ensures the file is automatically closed after use.
 
-Step 3: Check if the input number is equal to 0. If num == 0, return 1, since the factorial of 0 is 1.
+Step 3: The readlines() method reads all lines from the file and stores them as a list in the variable data.
 
-Step 4:If the number is greater than 0, calculated the factorial recursively by multiplying the number 
-with the factorial of (num − 1) and return the result.
+Step 4: A counter variable i is initialized with value 1 to keep track of line numbers.
 
-Step 5: Taken an integer input from the user using the input() function and converted it to an integer using int().
+Step 5: A message "Reading file content:" is printed to indicate the start of file reading.
 
-Step 6: Called the factorial() function with the user-provided number and store the returned value in the 
-variable factorial_value.
+Step 6: A for loop iterates through each line in the data list.
 
-Step 7: Checked if the returned value is None. If it is None, printed a message indicating that the factorial of 
-a negative number is not allowed.
+Step 7: For each line: The line number is printed using the counter i. rstrip() is used to remove the trailing newline character from each line.
+The counter i is incremented by 1 after printing each line.
 
-Step 8: If the returned value is not None, printed the factorial of the entered number.
+Step 8: If the file sample.txt does not exist, the program jumps to the except block.
+
+Step 9: The except FileNotFoundError block prints an error message indicating that the file was not found.
 
 ------------------------------------------------------------------------------------------------------------------
 
-**Task 2: Using the Math Module for Calculations **
-
+**Task 2: Write and Append Data to a File **
 Problem Statement: Write a Python program that:
-1.   Asks the user for a number as input.
-2.   Uses the math module to calculate the:
-    o   Square root of the number
-    o   Natural logarithm (log base e) of the number
-    o   Sine of the number (in radians)
-3.   Displays the calculated results.
+1.   Takes user input and writes it to a file named output.txt.
+2.   Appends additional data to the same file.
+3.   Reads and displays the final content of the file.
 
 Solution:
-Step 1: Imported the math module to access mathematical functions such as square root, logarithm, and sine.
+Step 1: The input() function is used to take a line of text from the user and store it in the variable line1.
 
-Step 2: Defined a function square_root(num) to calculate the square root of a number. If the number is negative,
-the function returns None because the square root of a negative number is not defined.
-If the number is non-negative, the function returns the square root using math.sqrt().
+Step 2: The file output.txt is opened in write mode ("wt") using the with open() statement.
+        If the file already exists, its overwrites.
+        If the file does not exist, it is created.
 
-Step 3: Defined a function natural_log(num) to calculate the natural logarithm of a number.If the number is less than 
-or equal to zero, the function returns None because the natural logarithm is defined only for positive numbers.
-If the number is positive, the function returns the natural logarithm using math.log().
+Step 3: The text stored in line1 is written to the file using the write() function, followed by a newline character (\n).
 
-Step 4: Defined a function sine(num) to calculate the sine of a number.The input value is considered to be in radians.
-The sine value is calculated using math.sin().
+Step 4: A confirmation message is printed indicating that the data has been successfully written to the file.
 
-Step 5: integer input from the user using the input() function taken and converted it into an integer using int().
+Step 5: The input() function is used again to take additional text from the user and store it in the variable line2.
 
-Step 6: Call the square_root(), natural_log(), and sine() functions with the user-provided number and store their 
-returned values in separate variables.
+Step 6: The file output.txt is opened in append mode ("at").
 
-Step 7: Checked the returned value of the square root function. If the value is None, displayed a message indicating
-that the square root is not defined for negative numbers.
-Otherwise, display the calculated square root.
+Step 7: The text stored in line2 is appended to the file using the write() function, followed by a newline.
 
-Step 8: Checked the returned value of the natural logarithm function.If the value is None, displayed a message 
-indicating that the natural logarithm is defined only for positive numbers.
-Otherwise, display the calculated logarithm.
+Step 8: A message is printed to confirm that the data has been successfully appended.
 
-Step 9: Displayed the sine value of the number, as sine is defined for all real numbers.
+Step 9: The file output.txt is opened in read mode ("rt") to read its contents.
 
+Step 10: The readlines() function reads all lines from the file and stores them in the list data.
+
+Step 11: A header message is printed, and a for loop is used to display each line from the file.
+
+Step 12: The rstrip() function removes any extra newline characters while printing each line, ensuring clean output.
 
