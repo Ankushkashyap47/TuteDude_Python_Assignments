@@ -1,4 +1,4 @@
-# Assignment 03 
+# Assignment 04
 **Task 1: Read a File and Handle Errors **
 Problem Statement:  Write a Python program that:
 1.   Opens and reads a text file named sample.txt.
