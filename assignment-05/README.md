@@ -1,63 +1,48 @@
-# Assignment 04
-**Task 1: Read a File and Handle Errors **
+# Assignment 05
+**Task 1: Create a Dictionary of Student Marks **
 Problem Statement:  Write a Python program that:
-1.   Opens and reads a text file named sample.txt.
-2.   Prints its content line by line.
-3.   Handles errors gracefully if the file does not exist.
+1.   Creates a dictionary where student names are keys and their marks are values.
+2.   Asks the user to input a student's name.
+3.   Retrieves and displays the corresponding marks.
+4.   If the student’s name is not found, display an appropriate message.
  
 Solution:
-Step 1: The program starts with a try block to handle possible file-related errors during execution.
+Step 1: A dictionary named student_data is created where student names are stored as keys and their corresponding 
+        marks are stored as values.
 
-Step 2: The open() function is used in read text mode ("rt") to open the file named sample.txt.
-The with statement ensures the file is automatically closed after use.
+Step 2: The input() function is used to accept a student’s name from the user and store it in the variable student_find.
 
-Step 3: The readlines() method reads all lines from the file and stores them as a list in the variable data.
+Step 3: An if condition is used to check whether the entered student name exists as a key in the student_data dictionary.
 
-Step 4: A counter variable i is initialized with value 1 to keep track of line numbers.
+Step 4: If the student name is found in the dictionary, the corresponding marks are retrieved using the key and
+        displayed using the print() function.
 
-Step 5: A message "Reading file content:" is printed to indicate the start of file reading.
-
-Step 6: A for loop iterates through each line in the data list.
-
-Step 7: For each line: The line number is printed using the counter i. rstrip() is used to remove the trailing newline character from each line.
-The counter i is incremented by 1 after printing each line.
-
-Step 8: If the file sample.txt does not exist, the program jumps to the except block.
-
-Step 9: The except FileNotFoundError block prints an error message indicating that the file was not found.
+Step 5: If the student name is not found, the else block is executed and message “Student not found.” is displayed.
 
 ------------------------------------------------------------------------------------------------------------------
 
-**Task 2: Write and Append Data to a File **
+**Task 2:  Demonstrate List Slicing **
 Problem Statement: Write a Python program that:
-1.   Takes user input and writes it to a file named output.txt.
-2.   Appends additional data to the same file.
-3.   Reads and displays the final content of the file.
+1.   Creates a list of numbers from 1 to 10.
+2.   Extracts the first five elements from the list.
+3.   Reverses these extracted elements.
+4.   Prints both the extracted list and the reversed list
+
 
 Solution:
-Step 1: The input() function is used to take a line of text from the user and store it in the variable line1.
+Step 1: A function named process_numbers() is defined which accepts a list (number_list) as an argument.
 
-Step 2: The file output.txt is opened in write mode ("wt") using the with open() statement.
-        If the file already exists, its overwrites.
-        If the file does not exist, it is created.
+Step 2: Inside the function, the original list is printed using the print() function.
 
-Step 3: The text stored in line1 is written to the file using the write() function, followed by a newline character (\n).
+Step 3: List slicing is used to extract the first five elements from the list using number_list[:5], 
+        and the result is stored in sliced_list.
 
-Step 4: A confirmation message is printed indicating that the data has been successfully written to the file.
+Step 4: The extracted list (sliced_list) is printed.
 
-Step 5: The input() function is used again to take additional text from the user and store it in the variable line2.
+Step 5: The reverse() method is used to reverse the extracted list in place.
 
-Step 6: The file output.txt is opened in append mode ("at").
+Step 6: The reversed extracted list is printed.
 
-Step 7: The text stored in line2 is appended to the file using the write() function, followed by a newline.
+Step 7: Outside the function, a list named numbers containing values from 1 to 10 is created.
 
-Step 8: A message is printed to confirm that the data has been successfully appended.
-
-Step 9: The file output.txt is opened in read mode ("rt") to read its contents.
-
-Step 10: The readlines() function reads all lines from the file and stores them in the list data.
-
-Step 11: A header message is printed, and a for loop is used to display each line from the file.
-
-Step 12: The rstrip() function removes any extra newline characters while printing each line, ensuring clean output.
-
+Step 8: The function process_numbers() is called by passing the numbers list as an argument.
