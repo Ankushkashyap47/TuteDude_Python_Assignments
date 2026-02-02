@@ -2,7 +2,6 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter import font
-
 # Step 2: GUI Interaction
 window = Tk()
 window.geometry("300x400")
